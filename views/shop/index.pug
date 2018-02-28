@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+	//- .row
+	//- 	.col-sm-6.col-md-4
+	//- 		.thumbnail
+	//- 			img.img-responsive(src="https://www.dartscorner.co.uk/images/harrowsretina_x_dartflights_std_red.png", alt="...")
+	//- 			.caption
+	//- 				h3 Harrows Retina-X
+	//- 				p.description Red
+	//- 				.clearfix
+	//- 					.price.pull-left $0.70
+	//- 					a.btn.btn-success.pull-right(href="#" role="button") Button
+	each product in products
+		.col-sm-6.col-md-4
+			.thumbnail
+				img.img-responsive(src= product.imagePath, alt="image")
+				.caption
+					h3 #{product.title}
+					p.description #{product.description}
+					.clearfix
+						.price.pull-left $#{product.price}
+						a.btn.btn-success.pull-right(href="#" role="button") Add to Cart
